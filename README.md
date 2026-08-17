@@ -231,6 +231,89 @@ After the above process, we obtain 60 base samples from each dataset, where 15 s
 
 
 ![4cfba4ca5d810f36b0518e9fb3af943](https://github.com/user-attachments/assets/f2d4e150-20d0-45c3-bc20-879808a1ee93)
+#### Base Sample Details
+
+To ensure full transparency and reproducibility, we provide the complete breakdown of the 15 base samples selected for each LLM. The following tables list the specific bug IDs and their corresponding repair-pattern categories for each studied LLM on both Defects4J and QuixBugs.
+
+##### Mistral
+
+| Defects4J Bug ID | Defects4J Category | QuixBugs Bug ID | QuixBugs Category |
+|------------------|--------------------|-----------------|-------------------|
+| Lang-33 | Missing Null-Check | BREADTH_FIRST_SEARCH | Conditional Block, Single Line |
+| Mockito-38 | Missing Null-Check | BUCKETSORT | Wrong Reference |
+| JacksonCore-5 | Expression Fix | FIND_FIRST_IN_SORTED | Conditional Block, Expression Fix |
+| Lang-59 | Wrong Reference | FIND_IN_SORTED | Expression Fix |
+| Cli-8 | Expression Fix | FLATTEN | Expression Fix, Wrong Reference |
+| Lang-12 | Conditional Block | KNAPSACK | Expression Fix |
+| Lang-21 | Constant Change, Expression Fix, Single Line, Wrong Reference | IS_VALID_PARENTHESIZATION | Expression Fix |
+| Mockito-34 | Expression Fix, Single Line | LEVENSHTEIN | Expression Fix, Wrong Reference |
+| Jsoup-45 | Expression Fix | LIS | Expression Fix, Null-Check |
+| JacksonDatabind-1 | Conditional Block | LONGEST_COMMON_SUBSEQUENCE | Expression Fix |
+| Compress-46 | Expression Fix | MERGESORT | Conditional Block, Expression Fix, Single Line |
+| Cli-28 | Conditional Block | NEXT_PERMUTATION | Expression Fix |
+| Cli-17 | Conditional Block | PASCAL | Single Line |
+| Codec-6 | Conditional Block | RPN_EVAL | Expression Fix |
+| Lang-14 | Wraps-with/Unwraps-from | TO_BASE | Expression Fix, Code Moving |
+
+##### LLaMA3-70B
+
+| Defects4J Bug ID | Defects4J Category | QuixBugs Bug ID | QuixBugs Category |
+|------------------|--------------------|-----------------|-------------------|
+| Closure-126 | Conditional Block | LONGEST_COMMON_SUBSEQUENCE | Expression Fix |
+| Lang-45 | Conditional Block | REVERSE_LINKED_LIST | Single Line |
+| Time-15 | Conditional Block | RPN_EVAL | Expression Fix |
+| Mockito-38 | Missing Null-Check, Wraps-with/Unwraps-from, Single Line | NEXT_PERMUTATION | Expression Fix |
+| Lang-21 | Constant Change, Expression Fix, Single Line, Wrong Reference | IS_VALID_PARENTHESIZATION | Expression Fix |
+| Jsoup-70 | Conditional Block, Code Moving | LEVENSHTEIN | Expression Fix, Wrong Reference |
+| Closure-44 | Conditional Block | SHORTEST_PATH_LENGTHS | Conditional Block, Expression Fix, Wrong Reference |
+| Math-41 | Wrong Reference, Single Line | MINIMUM_SPANNING_TREE | Wrong Reference |
+| Mockito-34 | Expression Fix, Single Line | KHEAPSORT | Single Line, Wrong Reference |
+| Math-59 | Wrong Reference, Single Line | PASCAL | Single Line |
+| Math-82 | Expression Fix, Single Line | LIS | Expression Fix, Null-Check |
+| Math-11 | Expression Fix, Single Line | KNAPSACK | Expression Fix |
+| Lang-14 | Wraps-with/Unwraps-from | MERGESORT | Conditional Block, Expression Fix, Single Line |
+| Lang-12 | Conditional Block, Wraps-with/Unwraps-from, Missing Null-Check | FLATTEN | Expression Fix, Wrong Reference |
+| Closure-109 | Conditional Block, Wraps-with/Unwraps-from, Wrong Reference | GET_FACTORS | Conditional Block, Expression Fix |
+
+##### LLaMA3-8B
+
+| Defects4J Bug ID | Defects4J Category | QuixBugs Bug ID | QuixBugs Category |
+|------------------|--------------------|-----------------|-------------------|
+| Math-80 | Expression Fix, Single Line | LONGEST_COMMON_SUBSEQUENCE | Expression Fix |
+| Closure-7 | Conditional Block, Expression Fix, Wrong Reference | REVERSE_LINKED_LIST | Single Line |
+| JacksonDatabind-57 | Expression Fix | NEXT_PERMUTATION | Expression Fix |
+| Math-41 | Wrong Reference, Single Line | MAX_SUBLIST_SUM | Expression Fix, Single Line |
+| Jsoup-85 | Expression Fix | SHORTEST_PATH_LENGTHS | Conditional Block, Expression Fix, Wrong Reference |
+| JacksonDatabind-1 | Conditional Block | PASCAL | Single Line |
+| Mockito-29 | Missing Null-Check, Wraps-with/Unwraps-from, Single Line | MERGESORT | Conditional Block, Expression Fix, Single Line |
+| Lang-14 | Wraps-with/Unwraps-from | BREADTH_FIRST_SEARCH | Conditional Block, Single Line |
+| JacksonCore-5 | Expression Fix | BUCKETSORT | Wrong Reference |
+| Compress-45 | Conditional Block | FIND_FIRST_IN_SORTED | Conditional Block, Expression Fix |
+| Math-95 | Wraps-with/Unwraps-from | FIND_IN_SORTED | Expression Fix |
+| Lang-21 | Constant Change, Expression Fix, Single Line, Wrong Reference | FLATTEN | Expression Fix, Wrong Reference |
+| Jsoup-48 | Conditional Block, Expression Fix | IS_VALID_PARENTHESIZATION | Expression Fix |
+| Closure-109 | Conditional Block, Wraps-with/Unwraps-from, Wrong Reference | KNAPSACK | Expression Fix |
+| Compress-46 | Expression Fix | LCS_LENGTH | Expression Fix |
+
+##### CodeGemma-7B
+
+| Defects4J Bug ID | Defects4J Category | QuixBugs Bug ID | QuixBugs Category |
+|------------------|--------------------|-----------------|-------------------|
+| Closure-7 | Conditional Block, Expression Fix, Wrong Reference | BREADTH_FIRST_SEARCH | Conditional Block, Single Line |
+| Gson-11 | Conditional Block | BUCKETSORT | Wrong Reference |
+| JacksonDatabind-1 | Conditional Block | FIND_FIRST_IN_SORTED | Conditional Block, Expression Fix |
+| JacksonDatabind-27 | Expression Fix | FIND_IN_SORTED | Expression Fix |
+| Closure-109 | Conditional Block, Wraps-with/Unwraps-from, Wrong Reference | FLATTEN | Expression Fix, Wrong Reference |
+| JacksonDatabind-99 | Expression Fix | KNAPSACK | Expression Fix |
+| Compress-45 | Conditional Block | LCS_LENGTH | Expression Fix |
+| Math-95 | Wraps-with/Unwraps-from | LEVENSHTEIN | Expression Fix, Wrong Reference |
+| Cli-19 | Code Moving | MERGESORT | Conditional Block, Expression Fix, Single Line |
+| Jsoup-70 | Conditional Block, Code Moving | REVERSE_LINKED_LIST | Single Line |
+| JacksonDatabind-67 | Conditional Block | RPN_EVAL | Expression Fix |
+| Mockito-29 | Missing Null-Check, Single Line | TO_BASE | Expression Fix, Code Moving |
+| Lang-21 | Constant Change, Expression Fix, Single Line, Wrong Reference | DETECT_CYCLE | Conditional Block, Null-Check |
+| Lang-14 | Wraps-with/Unwraps-from | HANOI | Expression Fix, Single Line |
+| Math-89 | Wraps-with/Unwraps-from | SQRT | Expression Fix, Constant Change |
 
 ### Implemention of Nine MRs Based on AST.
 Navigate to the `AST` directory and execute the following code to implemnt MRs:
